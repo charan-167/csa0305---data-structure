@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int n, a = 0, b = 1, c, sum = 0, i;
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        sum += a;
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    printf("Sum of first %d Fibonacci numbers: %d\n", n, sum);
+    return 0;
+}

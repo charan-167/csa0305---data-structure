@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int reg[5] = {101, 102, 103, 104, 105};
+    int key, i, found = 0;
+
+    printf("Enter Reg No to search: ");
+    scanf("%d", &key);
+
+    for (i = 0; i < 5; i++) {
+        if (reg[i] == key) {
+            printf("Reg No %d found at index %d\n", key, i);
+            found = 1;
+            break;
+        }
+    }
+    if (!found) printf("Reg No not found\n");
+
+    return 0;
+}
