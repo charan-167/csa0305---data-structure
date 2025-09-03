@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter elements: ");
+    for(int i=0;i<n;i++) scanf("%d", &arr[i]);
+
+    printf("Repeated elements with indices:\n");
+    for(int i=0;i<n;i++) {
+        for(int j=i+1;j<n;j++) {
+            if(arr[i]==arr[j]) {
+                printf("Element %d repeated at indices %d and %d\n", arr[i], i, j);
+            }
+        }
+    }
+    return 0;
+}
